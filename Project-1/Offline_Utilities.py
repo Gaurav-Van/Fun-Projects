@@ -1,19 +1,27 @@
 import os
 import subprocess as sp
+from cv2 import cv2
+cv = cv2
 
-paths = {'Notepad': '%windir%\\system32\\notepad.exe',
-         'Teams': 'C:\\Users\\Asus\\AppData\\Local\\Microsoft\\Teams\\Update.exe --processStart "Teams.exe"',
+paths = {'Notepad': 'C:\\WINDOWS\\system32\\notepad.exe',
+         'Teams': 'C:\\Users\\Asus\\AppData\\Local\\Microsoft\\Teams\\current\\Teams.exe"',
          'Brave': 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Brave.lnk',
-         'Youtube': '"C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\chrome_proxy.exe" '
-                    ' --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml',
-         'Discord': 'C:\\Users\\Asus\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe',
+         'Youtube': 'C:\\Users\\Asus\\Desktop\\YouTube.lnk',
+         'Discord': 'C:\\Users\\Asus\\AppData\\Local\\Discord\\app-1.0.9004\\Discord.exe',
          'Spotify': 'C:\\Users\\Asus\\AppData\\Roaming\\Spotify\\Spotify.exe',
          'Whatsapp': 'C:\\Users\\Asus\\AppData\\Local\\WhatsApp\\WhatsApp.exe',
          }
 
 
 def open_camera():
-    sp.run('start microsoft.windows.camera', shell=True)
+    capture = cv.VideoCapture(0)
+    while True:
+        isTrue, frame = capture.read()
+        cv.imshow('WEBCAM', frame)
+        if cv.waitKey(1) & 0xFF == ord('w'):
+            break
+    capture.release()
+    cv.destroyAllWindows()
 
 
 def open_Notepad():
