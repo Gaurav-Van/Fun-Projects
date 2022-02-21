@@ -4,7 +4,7 @@ import pywhatkit as browse_kit
 from email.message import EmailMessage
 import smtplib
 from decouple import config
-
+import pyautogui as pg
 
 # Functions this will perform -
 # -> Find my IP address
@@ -28,7 +28,7 @@ def get_my_ip():
 
 
 def search_wikipedia(command):
-    result = wikipedia.summary(command, sentence=2)
+    result = wikipedia.summary(command, sentences=2)
     return result
 
 
@@ -42,10 +42,15 @@ def search_google(topic):
 
 def send_messages_whatsapp(number, message):
     browse_kit.sendwhatmsg_instantly(f'+91{number}', message)
+    width, height = pg.size()
+    pg.click(width / 2, height / 2)
 
 
 def send_group_whatsapp(G_ID, message):
-    browse_kit.sendwhatmsg_to_group_instantly(f'{G_ID}', message)
+    browse_kit.sendwhatmsg_to_group_instantly(f'{G_ID}', message, wait_time=32)
+    width, height = pg.size()
+    pg.click(width / 2, height/2)
+    pg.click()
 
 
 EMAIL = config('EMAIL')
@@ -80,7 +85,7 @@ def get_news_headlines():  # NEWS API
     value = response.json()
     articles = value['articles']
     for articles in articles:
-        news_headlines.append(articles['titles'])
+        news_headlines.append(articles['title'])
         news_source.append(articles['source']['name'])
 
     return news_headlines[:6], news_source[:6]
@@ -96,3 +101,52 @@ def get_weather(city):
     temperature = value["main"]["temp"]
     feels_like = value["main"]["feels_like"]
     return weather, f"{temperature}℃", f"{feels_like}℃"
+
+
+TREND_MOVIES_API = config('TREND_MOVIES_API_KEY')
+
+
+def get_movies():
+    trending_movies = []
+    response = requests.get(f'https://api.themoviedb.org/3/trending/movie/day?api_key={TREND_MOVIES_API}')
+    value = response.json()
+    result = value['results']
+    for results in result:
+        trending_movies.append(results['original_title'])
+    return trending_movies[:7]
+
+
+def get_joke():
+    headers = {
+        'Accept': 'application/json'
+    }
+    response = requests.get("https://icanhazdadjoke.com/", headers=headers)
+    value = response.json()
+    return value['joke']
+
+
+def get_advice():
+    response = requests.get("https://api.adviceslip.com/advice")
+    value = response.json()
+    return value['slip']['advice']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
