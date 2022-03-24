@@ -11,7 +11,6 @@ which will be fed to model as training data and on new data , it will predict th
  - Image Data generator -> Synthesize (make) new images from existing images - to introduce some Randomness
  
  
- 
  2nd Project - [ A Mini Project ] -> Web_cam_Face_Detection 
-  - Here face detection is acheived by Haar Cascade Classifier
-  - datetime is used to show the real time while detecting the face on web cam 
+  - Here face detection is achieved by Haar Cascade Classifier
+  - datetime is used to show the real time while detecting the face on webcam
