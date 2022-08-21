@@ -1,5 +1,5 @@
 # Fun-Projects
-Short Projects I did for Fun<br> 
+SHORT PROJECTS I did for FUN<br> 
 Because why not.<br>
 At this moment, it contains <br/>
 <hr>
