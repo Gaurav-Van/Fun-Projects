@@ -1,5 +1,6 @@
 This Project is a Bot like Jarvis from IRON-MAN
 Contains Offline and Online utilities
+<hr>
 
 OFFLINE FEATURES LIKE -
  - Notepad
@@ -10,15 +11,19 @@ OFFLINE FEATURES LIKE -
  - Spotify
  - Whatsapp
 
+<hr>
+
 ONLINE FEATURES LIKE-
- -> Find my IP address
- -> Search on Wikipedia
- -> Play videos on YouTube
- -> Search on Google
- -> Send WhatsApp message
- -> Send Email
- -> Get Latest News Headlines
- -> Get Weather Report
- -> Get Trending Movies
- -> Get Random Jokes
- -> Get Random Advice
+ - Find my IP address
+ - Search on Wikipedia
+ - Play videos on YouTube
+ - Search on Google
+ - Send WhatsApp message
+ - Send Email
+ - Get Latest News Headlines
+ - Get Weather Report
+ - Get Trending Movies
+ - Get Random Jokes
+ - Get Random Advice
+
+<hr>
