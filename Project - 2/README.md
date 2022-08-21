@@ -9,4 +9,8 @@ which will be fed to model as training data and on new data , it will predict th
 # Some short important points
  - While building a Deep CV model - all the data [ here images] has to be of same size, so we have to resize
  - Image Data generator -> Synthesize (make) new images from existing images - to introduce some Randomness
+ 
+## Tip
+ - To install Datasets - Visit file <b>Data-Set [Detect_Classify].txt</b> in this repo 
+ - Install and Extract
 
