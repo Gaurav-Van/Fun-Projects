@@ -1,0 +1,3 @@
+- Here face and eye detection is achieved by Haar Cascade Classifier
+ - Got the 4 coordinates of face and then applied haar cascade classifier of eye within the region of face
+ - datetime is used to show the real time while detecting the face on webcam
