@@ -1,6 +1,6 @@
 Using the Concept of Finding Angle between 2 lines using Slope
 <hr>
-m1 =  slope of line 1
+m1 =  slope of line 1<br>
 m2 =  slope of line 2
 <hr>
 tan @ = |  m2-m1/(1+(m2*m1)) |
