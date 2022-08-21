@@ -11,6 +11,6 @@ which will be fed to model as training data and on new data , it will predict th
  - Image Data generator -> Synthesize (make) new images from existing images - to introduce some Randomness
  
 ## Tip
- - To install Datasets - Visit file <b>Data-Set [Detect_Classify].txt</b> in this repo 
+ - To Install Datasets - Visit file <b>Data-Set.txt</b> in this repo 
  - Install and Extract
 
