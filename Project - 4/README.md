@@ -1,4 +1,0 @@
-  - Here Number Plate detection is achieved by Haar Cascade Classifier
-  - With those 4 coordinates, extracted the Region of interest image
-  - and applied reader from easyocr on that ROI, to detect numbers of Number Plate
-  - With the help of cv.write - saved that ROI in a Separate folder [Saved_Number_Plate]
