@@ -1,3 +1,0 @@
-Simpsons_dataset -> https://drive.google.com/file/d/1-neUqzZ5fNKB5BHVEEFVhMmmnQhnZ8Bd/view?usp=sharing
-
-Kaggle_simpson_testSet -> https://drive.google.com/file/d/1CWmKNFKOrcSiQ-XEsrUn0g1A8wYTwwsk/view?usp=sharing
